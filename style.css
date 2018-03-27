@@ -1,0 +1,37 @@
+body {
+   margin-top: 5%;
+   background-color: #ccffff;
+}
+
+span {
+   color: #80dfff;
+}
+
+#title {
+   color: #80dfff;
+}
+
+.more-quote {
+   margin-top: 11px;
+}
+
+#quote-icon {
+   font-size: 5vw;
+   font-size: 5vh;
+   padding-top: 10%;
+   /*margin-left: 50%;*/
+}
+
+footer {
+   font-size: 30px;
+   color: #80dfff;
+}
+
+.jumbotron {
+   background: white !important
+}
+
+h3 {
+   font-size: 4vw;
+   font-size: 4vh;
+}
