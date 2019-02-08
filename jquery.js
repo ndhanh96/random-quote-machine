@@ -1,16 +1,19 @@
 $(document).ready(function() {
 
-   $.getJSON("https://talaikis.com/api/quotes/random", function(a) {
-      $("#quote").append(a.quote);
-      $("footer").append(a.author);
-      $("#tweet-button").attr("href","https://twitter.com/intent/tweet?text=" + a.quote + "&hashtags=Quote4Life");
+   $.getJSON("https://thesimpsonsquoteapi.glitch.me/quotes/", function(a) {
+      // console.log(a[0].quote); just for testing
+      $("#quote").append(a[0].quote);
+      $("footer").append(a[0].character);
+      $("#tweet-button").attr("href","https://twitter.com/intent/tweet?text=" + a[0].quote + "&hashtags=Quote4Life");
    });
 
+
    $(".more-quote").click(function () {
-      $.getJSON("https://talaikis.com/api/quotes/random/", function(a) {
-         $("#tweet-button").attr("href","https://twitter.com/intent/tweet?text=" + a.quote + "&hashtags=Quote4Life");
-         $("#quote").text(a.quote);
-         $("footer").text(a.author);
+      $.getJSON("https://thesimpsonsquoteapi.glitch.me/quotes/", function(a) {
+         // console.log(a[0].quote); just for testing
+         $("#tweet-button").attr("href","https://twitter.com/intent/tweet?text=" + a[0].quote + "&hashtags=Quote4Life");
+         $("#quote").text(a[0].quote);
+         $("footer").text(a[0].character);
       });
    });
 
